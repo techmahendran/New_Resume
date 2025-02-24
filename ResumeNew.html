@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume</title>
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      line-height: 18px;
+      font-size: 13px;
+    }
+
+    .container {
+      width: 1024px;
+      padding: 0;
+      margin: 0 auto;
+      font-family: sans-serif;
+    }
+
+    .profile {
+      width: 150px;
+      height: 150px;
+      background-image: url(./image/mahendran.jpg);
+      background-repeat: no-repeat;
+      background-position: 15px 0px;
+      background-size: contain;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 0 5px 0;
+    }
+
+    .header-right {
+      width: 76%;
+      padding: 10px 0 0;
+    }
+
+    .name {
+      font-size: 30px;
+    }
+
+    .address1 {
+      font-size: 20px;
+      color: #605f5f;
+    }
+    .title {
+      margin: 27px 0px 18px 0px;
+      text-transform: uppercase;
+      font-weight: bold;
+      color: #69599c;
+      font-size: 25px;
+    }
+
+    .Role {
+      font-weight: bold;
+      font-size: 20px;
+      padding-bottom: 5px;
+    }
+    .sub-title {
+      font-weight: bold;
+      text-decoration: underline;
+      font-size: 14px;
+    }
+
+    .companyName {
+      font-size: 15px;
+      color: #424242;
+      font-weight: 600;
+      line-height: 20px;
+    }
+
+    .contactdetails p {
+      display: flex;
+      align-items: center;
+    }
+
+    .contant {
+      text-align: justify;
+      line-height: 30px;
+    }
+
+    .education_box {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 0 0 10px 0;
+    }
+
+    .bold {
+      font-weight: bold;
+    }
+
+    .institute {
+      font-size: 12px;
+      margin: 0px 0px 0px;
+    }
+
+    .skills_box {
+      display: flex;
+      margin: 10px 0px 0px;
+    }
+
+    .skills_box p:nth-child(1) {
+      width: 5%;
+    }
+
+    .skills_box p:nth-child(2) {
+      width: 30%;
+      font-weight: bold;
+    }
+
+    .skills_box p:nth-child(3) {
+      width: 5%;
+    }
+
+    .skills_box p:nth-child(4) {
+      width: 55%;
+    }
+
+    .d-flex {
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .d-flex p:first-child {
+      width: 5%;
+      line-height: 30px;
+    }
+
+    .d-flex p:nth-child(2) {
+      width: 95%;
+      line-height: 21px;
+    }
+
+    .PROJECT_DESCRIPTION p {
+      word-spacing: 3px;
+    }
+
+    .sign {
+      height: 7vh;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .contactdetails {
+      display: flex;
+      justify-content: space-between;
+      background-color: #f1f1f1;
+      font-size: 17px;
+      padding: 5px;
+      margin: 10px 0;
+    }
+
+    .contactdetails i {
+      color: #69599c;
+      font-size: 14px;
+      margin-right: 5px;
+    }
+
+    .hide {
+      display: none !important;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .left,
+    .right {
+      width: 47%;
+      margin-top: -13px;
+    }
+    .Declaration {
+      margin: 0px 0 0 0px;
+      position: relative;
+    }
+    ol {
+      list-style-type: none;
+      counter-reset: list-counter;
+    }
+
+    ol li {
+      counter-increment: list-counter;
+      line-height: 22px;
+    }
+
+    ol li::before {
+      content: "(" counter(list-counter, lower-roman) ") "; /* Adds (i), (ii), (iii) */
+    }
+    @media print {
+      .sign {
+        top: -60px;
+      }
+    }
+  </style>
+
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="header-left">
+          <div class="profile"></div>
+        </div>
+        <div class="header-right">
+          <h1 class="name"></h1>
+          <h3 style="margin-top: 10px" class="address1"></h3>
+          <p style="margin-top: 5px" class="address2"></p>
+          <p style="margin-top: 3px" class="address3"></p>
+        </div>
+      </div>
+
+      <div class="contactdetails">
+        <p>
+          <i class="fa fa-envelope-o" aria-hidden="true"></i>
+          <span class="email"></span>
+        </p>
+        <p>
+          <i class="fa fa-mobile-phone" aria-hidden="true"></i>
+          <span class="phone"></span>
+        </p>
+
+        <p>
+          <i class="fa fa-github" aria-hidden="true"></i>
+          <span class="github"></span>
+        </p>
+
+        <p>
+          <i class="fa fa-map-marker" aria-hidden="true"></i>
+          <span class="Location"></span>
+        </p>
+      </div>
+
+      <div class="objective hide">
+        <p class="title">OBJECTIVE</p>
+        <p class="contant" style="text-indent: 0.5in">
+          To pursue a challenging career in a fast growing organization that
+          provides anenvironment for continuous learning, where creativity and
+          commitment are well rewarded and utilize the same for consistently
+          rendering my service with enthusiasm in achieving the organization
+          objectives and goals.
+        </p>
+      </div>
+      <div class="row">
+        <div class="left">
+          <div class="experiance">
+            <!-- certification -->
+            <p class="title hide">Certification Course</p>
+
+            <div class="row hide">
+              <p style="width: 4%">
+                <i class="fa fa-caret-right" aria-hidden="true"></i>
+              </p>
+              <div style="width: 96%">
+                <p class="Role">Web Development</p>
+
+                <p class="companyName">
+                  Completed web development certification course in FIIT
+                  FORMACIAN PRIVATE LIMITED
+                </p>
+                <p class="institute" style="display: none">08/2021 - 08/2022</p>
+
+                <p class="institute">
+                  Technology Learned: HTML5, CSS3, JavaScript.
+                </p>
+              </div>
+            </div>
+
+            <p class="title">WORK EXPERIENCE</p>
+
+            <div class="row" style="margin-top: 20px">
+              <p style="width: 4%">
+                <i class="fa fa-caret-right" aria-hidden="true"></i>
+              </p>
+              <div style="width: 96%">
+                <p class="Role">Front End Developer</p>
+
+                <p class="companyName">Leadtech Solutions Pvt Ltd - Chennai</p>
+                <!-- <p class="companyName">WIZ Freight Tech and R&D Centre - Chennai.</p> -->
+                <ol>
+                  <li>
+                    The main aim of developing this project is to bring the
+                    users online from various branches, and store the data in
+                    one single location.
+                  </li>
+                  <li>August 2022 - October 2023.</li>
+                  <li>
+                    <b>Technology :</b> HTML5, CSS3, Tailwind CSS, JavaScript,
+                    React Js, Next Js, TypeScript.
+                  </li>
+                </ol>
+              </div>
+            </div>
+            <div class="row" style="margin-top: 20px">
+              <p style="width: 4%">
+                <i class="fa fa-caret-right" aria-hidden="true"></i>
+              </p>
+              <div style="width: 96%">
+                <p class="Role">Software Development Engineer</p>
+
+                <p class="companyName">WIZ Freight Tech and R&D Centre</p>
+                <ol>
+                  <li class="institute">Outober 2023 – February 2025</li>
+
+                  <li class="institute">
+                    <b>Technology :</b> HTML5, CSS3, Tailwind CSS, Chakra UI,
+                    JavaScript, React Js, Next Js, MongoDB, Day Js.
+                  </li>
+
+                  <li class="institute">
+                    <b>skills :</b> React Hook Form: I created forms with
+                    validation
+                  </li>
+                  <!-- <li class="institute">Outober 2023 – February 2025</li> -->
+
+                  <li class="institute">
+                    <b>Building products with speed :</b> Chakra UI A modern
+                    React component library that provides accessible,
+                    customizable, and themable UI components. It simplifies
+                    building responsive and visually appealing interfaces with a
+                    flexible styling system based on Emotion (CSS-in-JS).
+                  </li>
+                </ol>
+              </div>
+            </div>
+            <div class="row" style="margin-top: 20px">
+              <p style="width: 4%">
+                <i class="fa fa-caret-right" aria-hidden="true"></i>
+              </p>
+              <div style="width: 96%">
+                <p class="Role">Web Development</p>
+
+                <p class="institute">
+                  I have Completed Some Projects & CRUD Operations Apps using
+                  Next Js and I have good practice.
+                </p>
+              </div>
+            </div>
+            <div class="row" style="margin-top: 20px">
+              <p style="width: 4%">
+                <i class="fa fa-caret-right" aria-hidden="true"></i>
+              </p>
+              <div style="width: 96%">
+                <p class="sub-title">See My Portfolio Link:-</p>
+
+                <p class="institute" style="font-size: 14px">
+                  https://mahendran-portfolio-9682-d5ec3.firebaseapp.com/
+                </p>
+              </div>
+            </div>
+            <div class="technicalskills">
+              <p class="title">PROJECTS</p>
+              <div class="skills_box">
+                <p>
+                  <i class="fa fa-caret-right" aria-hidden="true"></i>
+                </p>
+                <p style="width: 20%">Client</p>
+                <p>:</p>
+                <p style="width: 95%">Logistics</p>
+              </div>
+              <div class="skills_box">
+                <p>
+                  <i class="fa fa-caret-right" aria-hidden="true"></i>
+                </p>
+                <p style="width: 20%">Duration</p>
+                <p>:</p>
+                <p style="width: 95%">2.5 Years</p>
+              </div>
+
+              <div class="skills_box hide">
+                <p>
+                  <i class="fa fa-caret-right" aria-hidden="true"></i>
+                </p>
+                <p style="width: 20%">Duration</p>
+                <p>:</p>
+                <p style="width: 95%">1 Year</p>
+              </div>
+
+              <div class="skills_box">
+                <p>
+                  <i class="fa fa-caret-right" aria-hidden="true"></i>
+                </p>
+                <p style="width: 20%">Project</p>
+                <p>:</p>
+                <p style="width: 95%">
+                  iFACT – Integrated Freight forwarding, Agency and Cargo
+                </p>
+              </div>
+            </div>
+            <div class="PROJECT_DESCRIPTION">
+              <p class="title">PROJECT DESCRIPTION</p>
+              <p style="text-decoration: underline" class="companyName">
+                iFACT
+              </p>
+
+              <div class="d-flex hide">
+                <p>
+                  <i class="fa fa-caret-right" aria-hidden="true"></i>
+                </p>
+                <p class="bold">
+                  iFACT – Integrated Freight forwarding, Agency and Cargo
+                </p>
+              </div>
+              <div class="d-flex">
+                <p>
+                  <i class="fa fa-caret-right" aria-hidden="true"></i>
+                </p>
+                <p>
+                  The Project deals with the online freight forwarding business.
+                  Freight forwarding is done by Ocean Imports and Exports, Air
+                  Imports and Exports.
+                </p>
+              </div>
+
+              <div class="d-flex">
+                <p>
+                  <i class="fa fa-caret-right" aria-hidden="true"></i>
+                </p>
+                <p>
+                  The users can geberate Job, Quotation, Booking, Invoice, Our
+                  BL, Liner BL, BL Release, Outstanding, Cargo and Containers.
+                </p>
+              </div>
+              <div class="d-flex">
+                <p>
+                  <i class="fa fa-caret-right" aria-hidden="true"></i>
+                </p>
+                <p>
+                  So, I can create Input Field custom component and reuse these
+                  components, which is why the time spent repeating this is
+                  prevented
+                </p>
+              </div>
+              <div class="d-flex">
+                <p>
+                  <i class="fa fa-caret-right" aria-hidden="true"></i>
+                </p>
+                <p>
+                  One can easily take mounthly reports, volume and revenue by
+                  customer wise and by port wise and many more.
+                </p>
+              </div>
+              <div class="d-flex">
+                <p>
+                  <i class="fa fa-caret-right" aria-hidden="true"></i>
+                </p>
+                <p>
+                  The main aim of developing this project is to bring the users
+                  online from various branches, and store the data in one single
+                  location.
+                </p>
+              </div>
+              <div class="d-flex hide">
+                <p>
+                  <i class="fa fa-caret-right" aria-hidden="true"></i>
+                </p>
+                <p>
+                  Applied responsive design principles and utility-first CSS
+                  framework, like Tailwind CSS to create a mobile-friendly
+                  interface, catering to a wide range of devices and screen
+                  sizes
+                </p>
+              </div>
+            </div>
+            <!-- <div class="row" style="margin-top: 20px">
+              <p style="width: 4%">
+                <i class="fa fa-caret-right" aria-hidden="true"></i>
+              </p>
+              <div style="width: 96%">
+                <p class="Role">Front-End Developer</p>
+
+                <p class="companyName">Leadtech Solutions Pvt Ltd - Chennai.</p>
+                <p class="institute">August 2022 – October 2023</p>
+
+                <p class="institute">
+                  Technology : HTML5, CSS3, Tailwind CSS, JavaScript, React Js
+                </p>
+              </div>
+            </div> -->
+
+            <p class="hide">
+              <span class="bold"
+                >Leadtech Solutions Pvt Ltd (M+R logistics)</span
+              >
+              – 1 Years of experience as
+              <span class="role bold">UI / UX Designer</span> from
+              <span class="bold"> 2<sup>nd</sup> August 2021</span> – Till date.
+            </p>
+          </div>
+
+          <div class="PROJECT_DESCRIPTION hide">
+            <p class="title">PROJECT DESCRIPTION</p>
+
+            <div class="d-flex hide">
+              <p>
+                <i class="fa fa-caret-right" aria-hidden="true"></i>
+              </p>
+              <p class="bold">
+                iFACT – Integrated Freight forwarding, Agency and Cargo
+              </p>
+            </div>
+            <div class="d-flex">
+              <p>
+                <i class="fa fa-caret-right" aria-hidden="true"></i>
+              </p>
+              <p>
+                The Project deals with the online freight forwarding business.
+                Freight forwarding is done by Ocean Imports and Exports, Air
+                Imports and Exports.
+              </p>
+            </div>
+            <div class="d-flex">
+              <p>
+                <i class="fa fa-caret-right" aria-hidden="true"></i>
+              </p>
+              <p>
+                The users can generate Job, Quotation, Booking, Invoice, Our BL,
+                Liner BL, BL Release, Outstanding, Cargo and Containers.
+              </p>
+            </div>
+            <div class="d-flex">
+              <p>
+                <i class="fa fa-caret-right" aria-hidden="true"></i>
+              </p>
+              <p>
+                One can easily take monthly reports, volume and revenue by
+                customer wise and by port wise and many more.
+              </p>
+            </div>
+            <div class="d-flex">
+              <p>
+                <i class="fa fa-caret-right" aria-hidden="true"></i>
+              </p>
+              <p>
+                The main aim of developing this project is to bring the users
+                online from various branches, and store the data in one single
+                location.
+              </p>
+            </div>
+          </div>
+
+          <!-- style="page-break-after: always" -->
+        </div>
+        <div class="right">
+          <div class="PROJECT_DESCRIPTION">
+            <p class="title">PROJECT DESCRIPTION</p>
+            <p style="text-decoration: underline" class="companyName">
+              WIZ Freight
+            </p>
+            <div class="d-flex hide">
+              <p>
+                <i class="fa fa-caret-right" aria-hidden="true"></i>
+              </p>
+              <p class="bold">
+                iFACT – Integrated Freight forwarding, Agency and Cargo
+              </p>
+            </div>
+            <div class="d-flex">
+              <p>
+                <i class="fa fa-caret-right" aria-hidden="true"></i>
+              </p>
+              <p>
+                <!-- Spearheaded the development of a robust job searching platform
+                using React.js, leveraging its component-based architecture for
+                modular and maintainable code -->
+                Freight Management System: "Developed and optimized a Freight
+                Management System for WIZ Freight, enhancing logistics
+                operations by implementing efficient UI components using React,
+                TypeScript, and Chakra UI. Integrated real-time data
+                visualization and streamlined workflows to improve user
+                experience and performance."
+              </p>
+            </div>
+
+            <div class="d-flex">
+              <p>
+                <i class="fa fa-caret-right" aria-hidden="true"></i>
+              </p>
+              <p>
+                <!-- Collaborated with a cross-functional team to design and
+                implement interactive user interfaces, including job listing
+                pages and application forms. -->
+                CRM Integration: Enhancement for Freight Operations, Manage
+                customer relationships, contacts, and communications. Dynamic
+                Forms & Validation User-friendly forms with real-time validation
+              </p>
+            </div>
+            <div class="d-flex">
+              <p>
+                <i class="fa fa-caret-right" aria-hidden="true"></i>
+              </p>
+              <p>
+                Dynamic Time Zone Handling for Global Logistics "Implemented a
+                dynamic time zone selection system in WIZ Freight, leveraging
+                React Select and Intl.supportedValuesOf('timeZone') to enhance
+                scheduling accuracy.
+              </p>
+            </div>
+            <div class="d-flex hide">
+              <p>
+                <i class="fa fa-caret-right" aria-hidden="true"></i>
+              </p>
+              <p>
+                Applied responsive design principles and CSS frameworks like
+                Tailwind CSS to create a mobile-friendly interface, catering to
+                a wide range of devices and screen sizes
+              </p>
+            </div>
+          </div>
+          <div class="technicalskills" style="margin-top: 34px">
+            <p class="title">TECHINICAL SKILLS</p>
+            <div class="skills_box">
+              <p>
+                <i class="fa fa-caret-right" aria-hidden="true"></i>
+              </p>
+              <p style="width: 49%; position: relative; left: 8px">Role</p>
+              <p>:</p>
+              <p style="width: 95%; position: relative; left: 8px">
+                Front End Developer
+              </p>
+            </div>
+            <div class="skills_box">
+              <p>
+                <i class="fa fa-caret-right" aria-hidden="true"></i>
+              </p>
+              <p>Language</p>
+              <p>:</p>
+              <p id="programming_languages"></p>
+            </div>
+
+            <div class="skills_box">
+              <p>
+                <i class="fa fa-caret-right" aria-hidden="true"></i>
+              </p>
+              <p>Framework/Library</p>
+              <p>:</p>
+              <p id="framework"></p>
+            </div>
+
+            <div class="skills_box hide">
+              <p>
+                <i class="fa fa-caret-right" aria-hidden="true"></i>
+              </p>
+              <p>Version control</p>
+              <p>:</p>
+              <p id="version_control"></p>
+            </div>
+
+            <div class="skills_box">
+              <p>
+                <i class="fa fa-caret-right" aria-hidden="true"></i>
+              </p>
+              <p>Tools</p>
+              <p>:</p>
+              <p id="tools"></p>
+            </div>
+          </div>
+          <div class="strength">
+            <p class="title">Linkedin</p>
+            <p style="margin: 10px 0 0">
+              <i
+                class="fa fa-caret-right"
+                aria-hidden="true"
+                style="width: 5%"
+              ></i>
+              https://www.linkedin.com/in/techmahendran/
+            </p>
+          </div>
+          <div class="education">
+            <p class="title">education</p>
+            <div class="education_box" style="display: none">
+              <div class="education-left">
+                <p class="bold" id="pg"></p>
+                <p class="institute" id="pg_institute"></p>
+              </div>
+              <div class="education-right bold" id="pg_year"></div>
+            </div>
+
+            <div class="education_box">
+              <div class="education-left">
+                <p class="bold" id="ug"></p>
+                <p class="institute" id="ug_institute"></p>
+              </div>
+              <div class="education-right bold" id="ug_year"></div>
+            </div>
+
+            <div class="education_box">
+              <div class="education-left">
+                <p class="bold" id="hsc"></p>
+                <p class="institute" id="hsc_school"></p>
+              </div>
+              <div class="education-right bold" id="hsc_year"></div>
+            </div>
+
+            <div class="education_box">
+              <div class="education-left">
+                <p class="bold" id="sslc"></p>
+                <p class="institute" id="sslc_school"></p>
+              </div>
+              <div class="education-right bold" id="sslc_year"></div>
+            </div>
+          </div>
+          <div class="strength">
+            <p class="title">Strength</p>
+            <p style="margin: 10px 0 0">
+              <i
+                class="fa fa-caret-right"
+                aria-hidden="true"
+                style="width: 5%"
+              ></i>
+              Sincerity and Self-motivated, Self-analysis.
+            </p>
+            <p style="margin: 10px 0 0">
+              <i
+                class="fa fa-caret-right"
+                aria-hidden="true"
+                style="width: 5%"
+              ></i>
+              Hard work and Dedication.
+            </p>
+            <p style="margin: 10px 0 0">
+              <i
+                class="fa fa-caret-right"
+                aria-hidden="true"
+                style="width: 5%"
+              ></i>
+              I am a good players
+            </p>
+            <p style="margin: 10px 0 0">
+              <i
+                class="fa fa-caret-right"
+                aria-hidden="true"
+                style="width: 5%"
+              ></i>
+              I am a self thought developer.
+            </p>
+          </div>
+          <div class="PROJECT_DESCRIPTION hide">
+            <p class="title">RESPONSIBILITIES</p>
+            <div class="d-flex">
+              <p>
+                <i class="fa fa-caret-right" aria-hidden="true"></i>
+              </p>
+              <p>In charge for major deployments</p>
+            </div>
+            <div class="d-flex">
+              <p>
+                <i class="fa fa-caret-right" aria-hidden="true"></i>
+              </p>
+              <p>
+                Involved in client level requirement gathering discussions and
+                project delivery meetings.
+              </p>
+            </div>
+            <div class="d-flex">
+              <p>
+                <i class="fa fa-caret-right" aria-hidden="true"></i>
+              </p>
+              <p>Responsible for production live bug fixes.</p>
+            </div>
+
+            <div class="d-flex">
+              <p>
+                <i class="fa fa-caret-right" aria-hidden="true"></i>
+              </p>
+              <p>Took part in the technical discussions</p>
+            </div>
+          </div>
+
+          <div class="technicalskills">
+            <p class="title">Personal Details</p>
+            <div class="skills_box">
+              <p>
+                <i class="fa fa-caret-right" aria-hidden="true"></i>
+              </p>
+              <p>DOB</p>
+              <p>:</p>
+              <p id="dob"></p>
+            </div>
+
+            <div class="skills_box">
+              <p>
+                <i class="fa fa-caret-right" aria-hidden="true"></i>
+              </p>
+              <p>Father's Name</p>
+              <p>:</p>
+              <p id="father"></p>
+            </div>
+            <div class="skills_box">
+              <p>
+                <i class="fa fa-caret-right" aria-hidden="true"></i>
+              </p>
+              <p>Language Known</p>
+              <p>:</p>
+              <p id="language_known"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="Declaration">
+        <p class="title">Declaration</p>
+        <p class="content">
+          I hereby declare that the above mentioned information is true to best
+          of my knowledge and I bear the responsibility for the comments of the
+          above mentioned particulars.
+        </p>
+      </div>
+      <div class="sign">
+        <div>
+          <p>Date:</p>
+          <p>Place:</p>
+        </div>
+        <div>
+          <p>( Mahendran M )</p>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"
+  ></script>
+  <script src="./JS/script.js"></script>
+</html>
