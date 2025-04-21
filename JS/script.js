@@ -5,7 +5,7 @@ $(".name").html("Mahendran M");
 // $(".address3").html("Tamil Nadu.");
 $(".address1").html("Front End Developer");
 $(".address2").html(
-  "<b>2.5 Years of Professional relevant experience, </b>I have earned considerable exposure by Providing IT Services in developing <br/> web applications using <b> HTML5, CSS3, Tailwind CSS, Javascript, React Js, Next Js, TypeScript.</b>"
+  "<b>2.9 Years of Professional relevant experience, </b>I have earned considerable exposure by Providing IT Services in developing <br/> web applications using <b> HTML5, CSS3, Tailwind CSS, Javascript, React Js, Next Js, TypeScript.</b>"
 );
 $(".address3").html("");
 
@@ -30,9 +30,11 @@ $("#sslc_school").html("Shymala Higher Secondary School, Kovilpatti");
 $("#sslc_year").html("2014");
 
 $("#programming_languages").html("HTML, CSS, JavaScript");
-$("#framework").html("Tailwind CSS, React Js, Next Js, React Hook Form, Chakra UI, Day Js.");
+$("#framework").html(
+  "React.js, Next.js, Tailwind CSS, Chakra UI, React Hook Form, Day.js"
+);
 $("#version_control").html("Git / GitHub");
-$("#tools").html("Visual Studio Code");
+$("#tools").html("Visual Studio Code, Vercel (Deployment), Git, npm");
 
 $("#dob").html("03rd Jun, 1999");
 $("#father").html("Muthupandi M");
